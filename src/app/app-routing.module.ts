@@ -4,7 +4,7 @@ import { SavingGoalComponent } from 'src/app/presentation/saving-goal/saving-goa
 
 
 const routes: Routes = [
-  { path: "", component: SavingGoalComponent }
+  { path: '', component: SavingGoalComponent }
 ];
 
 @NgModule({

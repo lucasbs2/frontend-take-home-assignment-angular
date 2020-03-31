@@ -12,7 +12,7 @@ export class GoalEffect {
         private actions$: Actions,
         private calculateGoal: CalculateGoal
   ) {}
-      
+
     loadMovies$ = createEffect(() => this.actions$.pipe(
         ofType(GoalActions.updateGoal),
         mergeMap((act) => this.calculateGoal.execute(act.goal).pipe(
@@ -22,3 +22,4 @@ export class GoalEffect {
         ))
       );
 }
+

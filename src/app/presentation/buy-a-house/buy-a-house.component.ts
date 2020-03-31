@@ -4,7 +4,7 @@ import { Goal } from 'src/app/domain/entity/goal.interface';
 import { GoalState } from 'src/app/presentation/state/goal.state';
 import { Observable } from 'rxjs';
 import { GoalSelectors } from 'src/app/presentation/state/goal.selector';
-import * as moment from "moment";
+import * as moment from 'moment';
 import { GoalActions } from 'src/app/presentation/state/goal.actions';
 
 @Component({
@@ -45,7 +45,7 @@ export class BuyAHouseComponent implements OnInit {
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
     if (this.preventKeyChanges) return;
-    let a = event;
+    const a = event;
     if (event.keyCode === 39) {
       this.increaseMonth();
     }
@@ -65,7 +65,7 @@ export class BuyAHouseComponent implements OnInit {
   }
 
   private updateMonth(amount: number) {
-    const date = this.month.clone().add(amount, "month");  
+    const date = this.month.clone().add(amount, 'month');
     this.month = date.min(this.now);
     this.calculate(this.totalAmount);
     this.disableDecrease = this.month.isSame(this.now);

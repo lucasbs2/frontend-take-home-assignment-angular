@@ -9,4 +9,4 @@ const selectFeature = createFeatureSelector<GoalState>('goal');
 
 export const GoalSelectors = {
     select: selectFeature
-}
+};

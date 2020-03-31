@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
 import { SavingGoalComponent } from './saving-goal.component';
 import { GoalState } from 'src/app/presentation/state/goal.state';
-import * as moment from "moment";
+import * as moment from 'moment';
 
 describe('SavingGoalComponent', () => {
   let component: SavingGoalComponent;
