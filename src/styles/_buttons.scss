@@ -1,0 +1,18 @@
+.btn-prepend {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-append {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btn-primary {
+    border-radius: 28px;
+    min-height: 56px;
+}
+
+.btn:focus {
+    box-shadow: none!important;
+}

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap');
+
+$blue: #1B31A8;
+$blue-light:#0079FF;
+
+/***************** BOOTSTRAP OVERRIDE *****************/
+
+/***************** TYPOGRAPHY *****************/
+$font-family-base: "Work Sans";
+$font-weight-base: 500;
+
+$body-color: #1C1E1F;
+$text-muted: #657786;
+$headings-margin-bottom: 0;
+
+
+/***************** THEME *****************/
+$body-bg: #F4F8FA;
+$secondary: #E1E8ED;
+$input-height-lg: 56px;
+
+
+/***************** GRID BREAKPOINTS *****************/
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+@mixin screen_size($media) {
+    @media only screen and (max-width: map-get($grid-breakpoints, $media)) { @content; }
+}

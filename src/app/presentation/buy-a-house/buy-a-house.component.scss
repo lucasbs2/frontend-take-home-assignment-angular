@@ -1,0 +1,37 @@
+@import "../../../styles/_variables.scss";
+
+.date-container {
+    height: $input-height-lg;
+}
+
+.input-group-prepend {
+    .input-group-text {
+        padding-left: 21px;
+        padding-right: 21px;
+    }
+}
+
+.icon {
+    width: 40px;
+    @include screen_size(sm) {
+        width: 32px !important;
+    }
+}
+
+.year {
+    font-weight: 400;
+}
+
+.form-container {
+    margin-top: 40px;
+    @include screen_size(sm) {
+        margin-top: 36px;
+    }
+}
+
+.btn-confirm {
+    width: 400px;
+    @include screen_size(sm) {
+        width: 100%;
+    }
+}

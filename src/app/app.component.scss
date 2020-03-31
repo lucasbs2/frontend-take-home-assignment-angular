@@ -1,0 +1,15 @@
+@import "../styles/_variables.scss";
+
+.logo {
+    width: 95px;
+}
+
+@media (max-width: map-get($grid-breakpoints, sm)) {
+    .logo {
+        width: 65px !important;
+    }
+
+    .container {
+        padding: 0;
+    }
+}

@@ -1,0 +1,12 @@
+<div class="d-flex flex-column">
+    <div class="d-flex flex-row amount-container align-items-center">
+        <span class="align-middle h5 text-description long">Monthly amount</span>
+        <span class="align-middle h5 text-description short">Monthly</span>
+        <span class="ml-auto text-value" *ngIf="!(($state | async).error) else elseBlock">{{($state | async).result?.monthly | currency}}</span>
+        <ng-template #elseBlock><span class="ml-auto text-value">$ --</span></ng-template>
+        
+    </div>
+    <div class="d-flex bg-body description-container">
+        <small>You're planning <strong>{{($state | async).result?.totalMonths}} monthly deposits</strong> to reach your <strong>{{($state | async).goal?.totalAmount | currency}}</strong> goal by <strong>{{($state | async).goal?.date | date: 'MMMM yyyy'}}.</strong></small>
+    </div>
+</div>

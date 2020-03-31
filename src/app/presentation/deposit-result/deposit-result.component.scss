@@ -1,0 +1,34 @@
+@import "../../../styles/_variables.scss";
+
+.text-value{
+    color: $blue-light;
+    font-size: 2.5rem;
+}
+
+.amount-container {
+    padding: 2em;
+    @include screen_size(sm) {
+        padding: 1em 1.5em 1em 1.5em;
+    }
+}
+
+.description-container {
+    padding: 1em 2em 1em 2em;
+    @include screen_size(sm) {
+        padding: 1em 1.5em 1em 1.5em;
+    }
+}
+
+.short {
+    display: none;
+    @include screen_size(sm) {
+        display: block;
+    }
+}
+
+.long {
+    display: block;
+    @include screen_size(sm) {
+        display: none;
+    }
+}
