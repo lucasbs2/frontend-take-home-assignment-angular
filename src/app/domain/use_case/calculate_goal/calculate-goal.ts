@@ -25,7 +25,7 @@ export class CalculateGoal implements UseCase<Goal, GoalResult> {
         if (monthsAhead < 0) {
             return throwError(new InvalidDateError());
         }
-        monthsAhead += 1; // current month will always count
+        monthsAhead += 1; // current month will count
 
         const result : GoalResult = {
             totalMonths: monthsAhead,

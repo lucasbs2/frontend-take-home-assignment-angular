@@ -45,7 +45,7 @@ export class BuyAHouseComponent implements OnInit {
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
     if (this.preventKeyChanges) return;
-    const a = event;
+    let a = event;
     if (event.keyCode === 39) {
       this.increaseMonth();
     }
@@ -66,7 +66,8 @@ export class BuyAHouseComponent implements OnInit {
 
   private updateMonth(amount: number) {
     const date = this.month.clone().add(amount, 'month');
-    this.month = date.min(this.now);
+    this.month = moment.max(this.now, date);
+  
     this.calculate(this.totalAmount);
     this.disableDecrease = this.month.isSame(this.now);
     
